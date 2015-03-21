@@ -1,0 +1,27 @@
+<h1>Listing fakeposts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fakeposts.each do |fakepost| %>
+      <tr>
+        <td><%= fakepost.title %></td>
+        <td><%= fakepost.content %></td>
+        <td><%= link_to 'Show', fakepost %></td>
+        <td><%= link_to 'Edit', edit_fakepost_path(fakepost) %></td>
+        <td><%= link_to 'Destroy', fakepost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fakepost', new_fakepost_path %>

@@ -4,6 +4,5 @@ class HomeController < ApplicationController
     #rearrange/process that data
     #make additional database calls
     #@Users = User.all
-    @user_signed_in = user_signed_in?
   end
 end
